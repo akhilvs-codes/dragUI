@@ -9,18 +9,18 @@ export default function Home() {
   const dragOverId = useRef(0)
   let arr = [{
     name: "akhil",
-    email: "eamilnwe",
-    place: "ee"
+    email: "akhilvscode@gmail.com",
+    place: "tvm"
   },
   {
-    name: "ads",
-    email: "eamilnwe",
-    place: "ee"
+    name: "guru",
+    email: "guru@gmail.com",
+    place: "kochi"
   }
     , {
-    name: "akhileee",
-    email: "eamilnwe",
-    place: "ee"
+    name: "rijo",
+    email: "rijo#gmail.com",
+    place: "kattada"
   }]
 
   const [data, setData] = useState(arr)
@@ -55,25 +55,25 @@ export default function Home() {
 
       <div className="flex justify-center h-screen items-center">
 
-        <table className="w-2xl" >
+        <table className="w-2xl  " >
           <thead>
             <tr className="text-left p-3">
               <th>name</th>
               <th>age</th>
-              <th>palce</th>
+              <th>place</th>
             </tr>
           </thead>
           <tbody>
             {
               data.map((tr,idx) => (
-                <tr draggable key={idx} className="text-left text-red-300 border-2 m-1 p-1 mt-16"
+                <tr draggable key={idx} className="text-left text-red-300 border-2 "
                   onDragStart={(e) => startDrag(idx)}
                   onDragEnter={(e) => enterDrag(idx)}
                   onDragEnd={(e) => drop()
                   }>
                   <td className="p-1">{tr.name}</td>
-                  <td>{tr.email}</td>
-                  <td>{tr.place}</td>
+                  <td className="p-1">{tr.email}</td>
+                  <td className="p-1">{tr.place}</td>
                 </tr>
               ))
             }
